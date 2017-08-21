@@ -75,7 +75,8 @@ class Related_Links_Widget_Box extends WP_Widget
 	{
 		extract( $args );
 
-		$title = apply_filters( 'widget_title', $instance['title'] );
+		$rl_widget_title = isset( $instance['title'] ) ? $instance['title'] : '';
+		$title = apply_filters( 'widget_title', $rl_widget_title );
 		$links = get_related_links();
 		?>
 		<?php if ( !empty( $links ) ) : ?>
@@ -96,7 +97,6 @@ class Related_Links_Widget_Box extends WP_Widget
 		
 		<?php
 	}
-
 }
 }
 ?>
