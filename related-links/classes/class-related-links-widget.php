@@ -97,7 +97,6 @@ class Related_Links_Widget_Box extends WP_Widget
 		
 		<?php
 	}
-
 }
 }
 ?>
